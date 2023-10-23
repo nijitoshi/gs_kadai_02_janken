@@ -1,0 +1,173 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 32px;
+}
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+main{
+    border-bottom:1px solid #ccc;
+}
+
+#main-practice {
+    height: 3400px;
+}
+
+#main-NP {
+    height: 500px;
+}
+
+
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
+p{
+    font-size:200%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:200px;
+}
+ul{
+    padding: 0;
+    border-top: 1px solid #000000;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:100%;
+}
+li{
+    text-align: center;
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+li:hover{
+    background: #0066CC;
+    color:#fff;
+}
+
+
+/* form.form-example {
+    display: table;
+  } */
+  
+/* div.form-example {
+    display: tab;
+  } */
+  
+#name {
+    display: table;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 700px;
+    height: 30px;
+  }
+  
+#send {
+    padding-right: 10px;
+    margin-left: 10px;
+    font-size: 24px;
+  }
+
+/*========= 背景動画設定のCSS ===============*/
+
+/*header設定*/
+#header{
+	position: relative;/*ローディング画像などを表示す際の基点とするため指定*/
+    height: 100vh;/*高さを全画面にあわせる*/
+    text-align: center;
+    color: #fff;
+    /*ローディング画面時＆動画が表示されないときに表示する背景画像のレスポンシブ化*/
+    background: url("../img/movie.jpg") no-repeat;
+    background-size: cover;
+}
+
+/* ローディングアイコン設定 */
+
+#loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+/*jQueryで付与されたdisappearクラスがついたらロゴエリアを非表示*/
+
+#loading.disappear{
+     display: none;   
+}
+
+
+/* youtube設定 */
+
+#youtube-area{
+    /* position: relative;
+    z-index: 1;最背面に設定 */
+    top: 0;
+    right:0;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+ 	opacity: 0;    
+}
+
+/*jQueryで付与されたappearクラスがついたらYoutubeエリアをふわっと表示*/
+#youtube-area.appear {
+	animation-name:PageAnimeAppear;
+	animation-duration:.5s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
+#youtube {
+/*天地中央配置*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+/*縦横幅指定*/
+  width: 150.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+  height: 40.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+  min-height: 30%;
+  min-width: 30%;
+  margin-top: -100px;
+}
+
+#panel-down, #flip-down {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+  }
+  
+  #panel-down {
+    padding: 50px;
+    display: none;
+  }
+
+  #panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+  }
+  
+  #panel {
+    padding: 50px;
+  }
